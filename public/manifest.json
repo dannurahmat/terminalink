@@ -18,5 +18,18 @@
           "128": "images/ic_terminalink-alt2-128.png"
       }
     },
-  "author": "drahmat@terminalink.com"
+  "author": "drahmat@terminalink.com", 
+  "permissions": [
+     "tabs", 
+     "activeTab"
+  ],
+  "content_scripts": [
+    {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["./static/js/content.js"]
+    }
+ ],
+ "chrome_url_overrides" : {
+  "newtab": "index.html"
+}
 }
